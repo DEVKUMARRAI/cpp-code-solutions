@@ -39,7 +39,7 @@ int main()
     while (cin >> n)
     arr.push_back(n);
     Quick_Sort(arr, 0, arr.size()-1);
-     cout << "after quick sorting" << endl;
+     cout << "after quick sorting applied" << endl;
     for (auto x:arr)
     {
         cout<<x<<" ";
