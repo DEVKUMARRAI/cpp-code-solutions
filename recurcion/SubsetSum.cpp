@@ -1,36 +1,36 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
-void Subset_Sum(vector<int>&array,int n,vector<int>&sum,int &s,int index)
+void Subset_Sum(vector<int> &arr, int size, vector<int> &result, int sum, int index)
 {
-    if(index==n)
+    if (index == size)
     {
-        sum.push_back(s);
+        result.push_back(sum);
         return;
     }
-    
-    Subset_Sum(array,n,sum,s+=array[index],index+1);
-    Subset_Sum(array,n,sum,s,index+1);
-
+    sum = sum + arr[index];
+    Subset_Sum(arr, size, result, sum, index + 1);
+    sum = sum - arr[index];
+    Subset_Sum(arr, size, result, sum, index + 1);
 }
 int main()
 {
-    int n,sum=0;
-    cin>>n;
+    int n;
+    int k;
+    cin >> n;
     vector<int> arr;
-    vector<int>result;
-    
-    while (n>0)
+    vector<int> result;
+
+    for (int i = 0; i < n; i++)
     {
-        int k;
-        cin>>k;
+
+        cin >> k;
         arr.push_back(k);
-        n--;
     }
-    Subset_Sum(arr,n,result,sum,0);
-    for(auto x:result)
+    Subset_Sum(arr, n, result, 0, 0);
+    sort(result.begin(), result.end());
+    for (auto x : result)
     {
-        cout<<x<<" ";
+        cout << x << " ";
     }
-    
 }
