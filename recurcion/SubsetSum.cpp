@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-
+#include<vector>
+#include<iostream>
 using namespace std;
 void Subset_Sum(vector<int> &arr, int size, vector<int> &result, int sum, int index)
 {
