@@ -1,6 +1,7 @@
 *.exe
 *.out
 settings.json
+tasks.json
 *
 !*.*
 !*/
