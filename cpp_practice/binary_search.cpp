@@ -61,6 +61,6 @@ int main()
     cin>>num;
     sort(Numbers,Numbers+n);
     //Binary_Search_Using_Loop(Numbers,num,n);
-    Binary_Search_Using_Reccursion(Numbers,0,n-1,num);
+    //Binary_Search_Using_Reccursion(Numbers,0,n-1,num);
 
 }
