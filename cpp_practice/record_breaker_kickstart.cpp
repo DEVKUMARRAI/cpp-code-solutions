@@ -34,10 +34,7 @@ void Record_Breaking_Day(int arr[],int n)
         }
         iterator++;
     }
-    // if(arr[iterator+1]>mx)
-    // {
-    //     cout<<arr[iterator+1]<<" ";
-    // }
+    
 }
 int main()
 {
