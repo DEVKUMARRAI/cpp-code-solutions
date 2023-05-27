@@ -3,30 +3,21 @@ using namespace std;
 // Brute Force Approach (O(n^2))
 void Subarray_With_Given_Sum(int arr[], int n, int sum)
 {
-    int temp = 0;
-    for (int i = 0; i < n - 1; i++)
+    int s;
+    for(int i=0;i<n;i++)
     {
-        temp += arr[i];
-        for (int j = i + 1; j < n; j++)
+        s=0;
+        for(int j=i;j<n;j++)
         {
-            if (sum == temp)
+            s+=arr[j];
+            if(s==sum)
             {
-                cout << i + 1 << " " << j + 1 << endl;
+                cout<<i+1<<" "<<j+1<<endl;
                 return;
             }
-            else
-            {
-                temp += arr[j];
-                if (sum == temp)
-                {
-                    cout << i + 1 << " " << j + 1 << endl;
-                    return;
-                }
-            }
         }
-        temp = 0;
     }
-    cout << "No subarray found" << endl;
+    cout<<-1<<endl;
     return;
 }
 void Subarray_With_Given_Sum_Optimized(int arr[], int n, int sum)
@@ -61,6 +52,6 @@ int main()
     }
     cout << "Enter the Sum " << endl;
     cin >> s;
-    //Subarray_With_Given_Sum(arr, n, s);
-    Subarray_With_Given_Sum_Optimized(arr,n,s);
+    Subarray_With_Given_Sum(arr, n, s);
+    //Subarray_With_Given_Sum_Optimized(arr,n,s);
 }
