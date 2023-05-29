@@ -48,5 +48,5 @@ int main()
         cin>>arr[i];
     }
     //Maximum_Sum_Subarray(arr,n);
-    Kadanes_Optimized_Approach(arr,n);
+    //Kadanes_Optimized_Approach(arr,n);
 }
